@@ -17,6 +17,15 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
+      - name: remove toha-1
+        run: git submodule deinit -f themes/toha
+      
+      - name: remove toha-2
+        run: git rm -f themes/toha/
+
+      - name: add toha
+        run: git submodule add https://github.com/hugo-toha/toha.git themes/toha
+
       - name: 🔥 Build Hugo
         run: hugo --minify
 
