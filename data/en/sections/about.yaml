@@ -37,13 +37,18 @@ socialLinks:
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
 softSkills:
-- name: HTML
-  percentage: 90
-  color: green
-- name: JavaScript
-  percentage: 70
+- name: Penguins
+  percentage: 100
   color: blue
-- name: Python
-  percentage: 80
-  color: orange
 
+- name: Castles
+  percentage: 90
+  color: yellow
+
+- name: Programming
+  percentage: 100
+  color: green
+
+- name: CG
+  percentage: 50
+  color: orange

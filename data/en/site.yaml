@@ -5,7 +5,7 @@ copyright: SatooRu © 2022 Copyright.
 description: Profile of SatooRu.
 
 customMenus:
-- name: SatooRu Note
+- name: SatooRu-Note
   url: https://satooru.nagoya
   hideFromNavbar: true
   showOnFooter: true

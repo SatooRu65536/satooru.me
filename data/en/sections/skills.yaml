@@ -24,7 +24,7 @@ skills:
   summary: "高２の文化祭用のサイトを作るために始めました。これが本格的にプログラミングを始めたきっかけです。テスト週間にくそサイトを作るのが好きです。"
 
 - name: Node.js
-  summary: "フレームワーク行脚中です。React, Hugo, (一応Vue)をやっています。JavaScriptは最高です。TypeScriptを始めたい..."
+  summary: "フレームワーク行脚中です。React, Hugo, (一応Vue)をやっています。JavaScriptは最高です。TypeScriptを始めたい"
 
 - name: Python
   summary: "Discord, Slack BOT を作ったり、出席確認システム、課題研究などで愛用してます。機会学習やりたいな..."

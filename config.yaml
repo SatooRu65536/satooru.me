@@ -33,7 +33,7 @@ enableEmoji: true
 params:
   background: "images/background.png"
   # GitHub repo URL of your site
-  gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
+  gitRepo: https://github.com/SatooRu65536/profile
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
@@ -45,3 +45,8 @@ params:
   # Currently, you can just hide it from the footer.
   newsletter:
     enable: false
+
+  darkMode:
+    enable: true
+    provider: darkreader
+    default: system
