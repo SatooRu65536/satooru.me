@@ -1,0 +1,51 @@
+# section information
+section:
+  name: Active Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+  - name: All
+    filter: "all"
+  - name: Programming
+    filter: "programming"
+  - name: CG
+    filter: "CG"
+  - name: 0ther
+    filter: "other"
+
+# your projects
+projects:
+  - name: 出席確認システム
+    timeline: "2021.12 -"
+    repo: https://github.com/SatooRu65536/attend-nfc # If your project is a public repo on GitHub, then provide this link. it will show star count.
+    #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+    summary: 情報システム部の出席確認システムを作ってます。現在デバック中ですがプログラムがえぐいので作り直します。
+    tags: ["programming", "python"]
+
+  - name: 課題研究
+    timeline: "2022.6 -"
+    repo: https://github.com/SatooRu65536/ThemedResearch
+    summary: チームで何かを作る（研究）授業として行ってます。テーマは「自動運転と一元制御」です。
+    tags: ["programming", "python", "Arduino", "esp32"]
+
+  - name: aibo
+    timeline: "2022.7 -"
+    url: https://www.sony-ef.or.jp/monodukuri/highschool.html
+    summary: 「高校生のエンジニア体験」として開発を行います。
+    tags: ["programming", "python", "html/css", "javascript", "aibo"]
+
+  - name: 電子工作
+    timeline: "2022.7 -"
+    summary: リレータッチボードを使用して遊んでます。
+    tags: ["programming", "electronics", "python"]
+
+  - name: 文化祭
+    timeline: "2022.8 -"
+    summary: 文化祭用のシステムを制作します
+    tags: ["programming"]

@@ -1,0 +1,48 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Illustrator
+  summary: "高1の夏休みにめっちゃ練習しました。ベジェ曲線描くのが得意です。（適当）なんか受賞してました。最近はロゴと資料作成用"
+
+- name: After Effects
+  summary: "モーショングラフィックスをしてました。今はしてません。極稀に部活動紹介動画を作ったりします。プログラミングの方が楽しいです"
+
+- name: HTML/CSS
+  summary: "生のHTML/CSSだけでサイト作ろうとしていた時期もありました。CSSは勉強中です"
+
+- name: JavaScript
+  summary: "高２の文化祭用のサイトを作るために始めました。これが本格的にプログラミングを始めたきっかけです。テスト週間にくそサイトを作るのが好きです。"
+
+- name: Node.js
+  summary: "フレームワーク行脚中です。React, Hugo, (一応Vue)をやっています。JavaScriptは最高です。TypeScriptを始めたい..."
+
+- name: Python
+  summary: "Discord, Slack BOT を作ったり、出席確認システム、課題研究などで愛用してます。機会学習やりたいな..."
+
+- name: C/C++(Arduino)
+  summary: "高１の授業で初めてプログラミング（C言語）をしました。最近はM5stackやESP32で遊ぶ時に使います。"
+
+- name: 電子工作
+  summary: "Raspberry Pi, M5stack, ESP32でいろいろつくってます。これから色々やっていきたい"
+
+- name: セキュリティ
+  summary: "kali linuxっていよね。WiFiクラックだったりをしてました。あんまりやってないけど今後勉強していきたい"
+
+- name: サーバー構築
+  summary: "Raspberry PiとApacheでwebサーバーを構築しました。データベースサーバーもやっています。現在は保守管理が面倒なのでレンタルサーバーを使ってます。"
+
+- name: 城・歴史
+  summary: "石垣が一番すきです。特に名古屋城本丸西側の打ち込み接ぎ。城巡りしたり古戦場回ったりしてます。何気に城郭検定２級もってます。（それ以上は無理！）"
+
+- name: 好きな数字
+  summary: "2の16乗である'65536'が一番好きです。次は'65535', '1024', '46'。46は「城」の語呂です。これは12個書きたかったので穴埋めです。"

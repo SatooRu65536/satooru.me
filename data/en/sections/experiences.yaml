@@ -1,0 +1,55 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: Meiden H.S.
+    url: "https://www.meiden.ed.jp"
+    location: Nagoya
+    # company overview
+    overview: 情報科学科に入学しました。
+  positions:
+  - designation: 名電高校入学
+    start: "2020.04"
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+
+- company:
+    name: AMIDC
+    url: "https://meidenid.com"
+    location: Nagoya
+    # company overview
+    overview: 情報デザイン部に入部しました。
+  positions:
+  - designation: 情報デザイン部 入部
+    start: "2020.07"
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    end: "2022.10"
+    
+- company:
+    name: MISC
+    # url: "https://misc.com"
+    location: Nagoya
+    # company overview
+    overview: システムコンピュータ部（現情報システム部）に入部しました。なんか部長なってました
+  positions:
+  - designation: 情報システム部 入部
+    start: "2021.11"
+    
+- company:
+    name: AIT
+    # url: "https://misc.com"
+    location: Toyota Aichi
+    # company overview
+    overview: 情報科学科コンピューターシステム専攻いきます（宣言）
+  positions:
+  - designation: 愛知工業大学 入学予定
+    start: "2023.04"
