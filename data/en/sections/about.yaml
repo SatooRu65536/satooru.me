@@ -18,7 +18,7 @@ company:
 # resume: "files/resume.pdf"
 
 # a summary about you
-summary: '私は情報科の高３です。プログラミングが好きで、よくJavaScript・Pythonと触れ合ってます。フレームワーク行脚中です。稀にCG（AE, Illustraor）とも触れます。もうCGはいいです。ペンギンや鯨類、城・歴史がめっちゃすきだったりもします。'
+summary: '情報科の高３です。プログラミングが好きで、いろんな言語と触れ合ってます。フレームワーク行脚中です。稀にCG（AE, Illustraor）とも触れます。もうCGはいいです。ペンギンや鯨類、城・歴史がめっちゃすきだったりもします。'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -28,7 +28,7 @@ socialLinks:
   url: "ryuto4619@gmail.com"
 - name: Twitter
   icon: "fab fa-twitter"
-  url: "https://twitter.com/satooru_65536?s=21&t=zOXZUqhHb0zy0iEey29HNA"
+  url: "https://twitter.com/satooru_65536"
 - name: Github
   icon: "fab fa-github"
   url: "https://www.github.com/SatooRu65536"
@@ -46,5 +46,5 @@ softSkills:
   color: blue
 
 - name: Python
-  percentage: 60
+  percentage: 90
   color: orange

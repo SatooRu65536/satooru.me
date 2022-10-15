@@ -22,9 +22,9 @@ markup:
       unsafe: true
 
 logo:
-  main: images/favicon.png
-  inverted: images/favicon.png
-  favicon: images/favicon.png
+  main: images/satooru.png
+  inverted: images/satooru.png
+  favicon: images/satooru.png
 
 # Enable global emoji support
 enableEmoji: true
