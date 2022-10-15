@@ -23,9 +23,9 @@ buttons:
 projects:
   - name: 出席確認システム
     timeline: "2021.12 -"
-    repo: https://github.com/SatooRu65536/attend-nfc # If your project is a public repo on GitHub, then provide this link. it will show star count.
+    repo: https://github.com/misc-org/attend-nfc # If your project is a public repo on GitHub, then provide this link. it will show star count.
     #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-    summary: 情報システム部の出席確認システムを作ってます。現在デバック中ですがプログラムがえぐいので作り直します。
+    summary: 情報システム部の出席確認システムを作ってます。
     tags: ["programming", "python"]
 
   - name: 課題研究
@@ -39,13 +39,3 @@ projects:
     url: https://www.sony-ef.or.jp/monodukuri/highschool.html
     summary: 「高校生のエンジニア体験」として開発を行います。
     tags: ["programming", "python", "html/css", "javascript", "aibo"]
-
-  - name: 電子工作
-    timeline: "2022.7 -"
-    summary: リレータッチボードを使用して遊んでます。
-    tags: ["programming", "electronics", "python"]
-
-  - name: 文化祭
-    timeline: "2022.8 -"
-    summary: 文化祭用のシステムを制作します
-    tags: ["programming"]

@@ -11,7 +11,7 @@ section:
 # Your Skills.
 # Give a summary of you each skill in the summary section.
 skills:
-- name: Illustrator
+- name: illustrator
   summary: "高1の夏休みにめっちゃ練習しました。ベジェ曲線描くのが得意です（適当）なんか受賞してたりします。最近はロゴと資料作成用"
 
 - name: After Effects
@@ -29,17 +29,8 @@ skills:
 - name: Python
   summary: "Discord, Slack BOT を作ったり、出席確認システム、課題研究などで愛用してます。機会学習やりたいな..."
 
-- name: C/C++(Arduino)
-  summary: "初めてのプログラミングはC言語でした。(高１) 最近はM5stackやESP32で遊ぶ時に使います。"
-
 - name: 電子工作
   summary: "Raspberry Pi, M5stack, ESP32などでいろいろつくってます。これから色々やっていきたい"
-
-- name: セキュリティ
-  summary: "kali linuxっていよね。WiFiクラックだったりをしてました。あんまりやってないけど今後勉強していきたい"
-
-- name: サーバー構築
-  summary: "Raspberry PiとApacheでwebサーバーを構築しました。データベースサーバーもやっています。現在は保守管理が面倒なのでレンタルサーバーを使ってます。"
 
 - name: ペンギン
   summary: 幼い頃からすきです。アデリーペンギンが一番すきですが、フンボルト属のペン達も結構すきです。京都水族館の年パスをもってたりします。名古屋港は大学生まで我慢。
