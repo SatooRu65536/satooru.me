@@ -21,16 +21,16 @@ markup:
     renderer:
       unsafe: true
 
-logo:
-  main: images/satooru.png
-  inverted: images/satooru.png
-  favicon: images/satooru.png
-
 # Enable global emoji support
 enableEmoji: true
 
 # Site parameters
 params:
+  logo:
+    favicon: images/favicon.png
+    main: images/favicon.png
+    inverted: images/favicon.png
+
   background: "images/background.png"
   # GitHub repo URL of your site
   gitRepo: https://github.com/SatooRu65536/profile
