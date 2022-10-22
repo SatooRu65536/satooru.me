@@ -13,8 +13,6 @@ tags: []
 categories: [travel, castle, aichi]
 ---
 
-## 長篠旅行に行ってきました
-
 ### 日時
 2022年10月22日
 
