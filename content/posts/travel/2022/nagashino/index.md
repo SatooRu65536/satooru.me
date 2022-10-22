@@ -2,15 +2,12 @@
 title: "長篠旅行"
 date: 2022-10-22T20:57:32+09:00
 weight: 20221022
-description: "長篠旅行"
 menu:
   sidebar:
     name: "長篠旅行"
     identifier: 2022-10-22T20:57:32+09:00
     weight: 20221022
-    parent: travel
-tags: []
-categories: [travel, castle, aichi]
+    parent: 2022
 ---
 
 ### 日時

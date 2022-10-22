@@ -2,15 +2,12 @@
 title: "aiboのアプリの一般公開が決まりました"
 date: 2022-10-15T20:39:34+09:00
 weight: 20221015
-description: "説明"
 menu:
   sidebar:
     name: "aibo"
     identifier: "2022-10-15T20:39:34+09:00"
     weight: 20221015
-    parent: activity-report
-tags: []
-categories: []
+    parent: 2022-10
 ---
 
 7月後半より情報システム部4人で推し活をテーマにaiboと遊べるすごくを制作しました。  

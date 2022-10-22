@@ -5,5 +5,4 @@ menu:
     name: 旅行
     identifier: travel
     weight: 40
-keys: ["blog"]
 ---

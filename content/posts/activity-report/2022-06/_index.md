@@ -1,9 +1,8 @@
 ---
 title: "テスト兼メモ"
-date: 2022-07-21T22:36:32+09:00
 menu:
   sidebar:
-    name: test
-    identifier: test
+    name: 2022-06
     weight: 100
+    parent: activity-report
 ---
