@@ -6,6 +6,6 @@ menu:
   sidebar:
     name: test
     identifier: test
-    weight: 10
+    weight: 100
 keys: ["test"]
 ---

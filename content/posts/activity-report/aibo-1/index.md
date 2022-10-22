@@ -1,13 +1,13 @@
 ---
 title: "aiboのアプリの一般公開が決まりました"
 date: 2022-10-15T20:39:34+09:00
-weight: 202210
+weight: 20221015
 description: "説明"
 menu:
   sidebar:
     name: "aibo"
     identifier: "2022-10-15T20:39:34+09:00"
-    weight: 202210
+    weight: 20221015
     parent: activity-report
 tags: []
 categories: []

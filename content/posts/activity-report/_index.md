@@ -2,7 +2,7 @@
 title: "テスト兼メモ"
 menu:
   sidebar:
-    name: activity-report
+    name: 活動報告
     identifier: activity-report
     weight: 10
 keys: ["blog"]
