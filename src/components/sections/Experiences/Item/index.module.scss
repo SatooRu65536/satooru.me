@@ -1,0 +1,109 @@
+.card {
+  padding: 30px 15px;
+  display: flex;
+  height: 200px;
+
+  @include pc {
+    padding: 30px;
+  }
+
+  .circle_container {
+    order: 1;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-accent;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &[data-fill='true'] {
+        color: $color-background;
+        background-color: $color-accent;
+      }
+    }
+
+    .line {
+      height: 140px;
+      width: 1px;
+      background-color: $color-accent;
+      position: absolute;
+      bottom: -100px;
+    }
+  }
+
+  @include pc {
+    margin-right: 50px;
+
+    &:nth-child(2n - 1) {
+      .circle_container {
+        margin-left: 400px;
+      }
+
+      .box {
+        .content {
+          width: 400px;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      .circle_container {
+        order: 2;
+      }
+
+      .box {
+        order: 1;
+        width: 400px;
+        text-align: end;
+
+        .content {
+          width: fit-content;
+          padding-right: 50px;
+          margin-left: auto;
+          text-align: start;
+        }
+      }
+    }
+  }
+
+  .box {
+    order: 2;
+    display: flex;
+    align-items: center;
+
+    .content {
+      .designation {
+        font-size: 1.3rem;
+      }
+
+      .name {
+        color: $color-accent;
+        font-size: 1rem;
+      }
+
+      .position {
+        font-size: 1rem;
+        padding-bottom: 10px;
+      }
+
+      .overview {
+        font-size: 1rem;
+        line-height: 2rem;
+        height: 60px;
+
+        @include mobile {
+          line-height: 4rem;
+          height: 80px;
+        }
+      }
+    }
+  }
+}

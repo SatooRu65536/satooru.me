@@ -1,0 +1,18 @@
+.icon {
+  text-align: center;
+
+  &[data-size='sm'] {
+    width: 80px;
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+  &[data-size='lg'] {
+    width: 100px;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

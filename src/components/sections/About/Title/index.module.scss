@@ -1,0 +1,12 @@
+.title {
+  display: flex;
+  align-items: flex-end;
+
+  img {
+    height: 50px;
+  }
+
+  h3 {
+    font-size: $fontsize-lg;
+  }
+}

@@ -1,0 +1,9 @@
+.recent_posts {
+  margin-inline: auto;
+  max-width: 1200px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+  gap: 20px;
+}

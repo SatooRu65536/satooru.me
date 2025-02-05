@@ -1,0 +1,27 @@
+.links {
+  margin-inline: auto;
+  padding-inline: 40px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: right;
+
+  div {
+    margin: 0 0 20px;
+    width: fit-content;
+
+    p {
+      padding-block: 5px;
+
+      a {
+        color: $color-text;
+        font-size: $fontsize-md;
+
+        .icon {
+          margin-right: 10px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}

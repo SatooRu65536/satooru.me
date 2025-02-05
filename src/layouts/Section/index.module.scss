@@ -1,0 +1,47 @@
+.section {
+  margin-inline: auto;
+  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  .title {
+    h1 {
+      font-size: $fontsize-xl;
+    }
+
+    &[data-underline='true'] {
+      width: fit-content;
+      position: relative;
+
+      &::after {
+        content: '';
+        border-bottom: 1px solid $color-primary;
+        position: absolute;
+        left: 0;
+        right: -70px;
+        bottom: 0;
+      }
+    }
+  }
+
+  .content {
+    margin: 20px 0;
+
+    &[data-leftspace='true'] {
+      margin-left: 2rem;
+    }
+
+    &[data-center='true'] {
+      display: flex;
+      justify-content: center;
+
+      & > * {
+        width: fit-content;
+      }
+    }
+  }
+}

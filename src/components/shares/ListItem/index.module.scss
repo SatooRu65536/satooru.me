@@ -1,0 +1,35 @@
+.lit_item {
+  list-style-type: none;
+  display: block;
+
+  .date {
+    font-size: $fontsize-md;
+  }
+
+  .main {
+    display: block;
+
+    > * {
+      display: inline;
+      font-size: $fontsize-lg;
+    }
+
+    .title {
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .link {
+      margin-left: 10px;
+    }
+
+    .link_icon {
+      height: $fontsize-lg;
+    }
+  }
+
+  .description {
+    font-size: $fontsize-md;
+    margin-left: 1rem;
+  }
+}

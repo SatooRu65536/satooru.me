@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  text-align: center;
+
+  & > * {
+    height: 100px;
+    margin-inline: auto;
+  }
+}
