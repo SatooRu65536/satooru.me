@@ -5,7 +5,6 @@ import styles from './index.module.scss';
 const LINKS = [
   { title: 'Home', href: '/' },
   { title: 'Posts', href: '/posts' },
-  { title: 'Map', href: '/map' },
 ];
 
 interface Props {
