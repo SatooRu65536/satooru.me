@@ -31,6 +31,12 @@ interface GetContentOptions {
   limit?: number;
 }
 
+export function getCategories(): Set<string> {
+  return new Set(
+    _contents.map((content) => parseContent(content, zContentSchema)?.data.category).filter((c) => c !== undefined),
+  );
+}
+
 export function getContents<T extends z.Schema = typeof zContentSchema>(
   { category, limit }: GetContentOptions,
   zSchema?: T,

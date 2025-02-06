@@ -1,0 +1,24 @@
+.pagenation {
+  $size: 30px;
+
+  display: flex;
+  gap: 10px;
+
+  .leader {
+    line-height: $size;
+  }
+
+  .page_link {
+    width: $size;
+    height: $size;
+    border: solid 1px $color-accent;
+    border-radius: 5px;
+    text-align: center;
+    line-height: $size;
+
+    &[data-current='true'] {
+      background-color: $color-accent;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: 10px;
+
+  .link {
+    padding: 5px 10px;
+    border: solid 1px $color-accent;
+    border-radius: 5px;
+
+    &[data-selected='true'] {
+      background-color: $color-accent;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.post_container {
+  margin-inline: auto;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  .title {
+    border-bottom: 1px solid #000;
+    padding-inline: 20px;
+  }
+
+  .postedat {
+    text-align: right;
+    padding-inline: 20px;
+  }
+}
