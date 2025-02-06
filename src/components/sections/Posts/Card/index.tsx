@@ -1,37 +1,29 @@
-import type { Dayjs } from 'dayjs';
 import type { ReactElement } from 'react';
 import CardLayout from '@/layouts/Card';
-
 import dayjs from 'dayjs';
-
 import styles from './index.module.scss';
+import { Content } from '@/schemas/articlets';
 
 interface Props {
-  title: string;
-  content: string;
-  thumbnail?: string;
-  date: Dayjs;
-  link: string;
+  post: Content;
 }
 
-const defaultThumbnail = '/default/penguin.webp';
-
 function PostCard(props: Props): ReactElement {
-  const { title, content, thumbnail, date, link } = props;
+  const { post } = props;
 
   return (
-    <CardLayout className={styles.card} link={link}>
-      <h3 className={styles.title}>{title}</h3>
+    <CardLayout className={styles.card} link={post.data.link}>
+      <h3 className={styles.title}>{post.data.title}</h3>
 
       <div className={styles.left}>
         <div className={styles.content}>
-          <p>{content.slice(0, 150)}</p>
+          <p>{post.content.slice(0, 150)}</p>
         </div>
-        <p className={styles.date}>{dayjs(date).format('YYYY/MM/DD')}</p>
+        <p className={styles.date}>{dayjs(post.data.updated_at).format('YYYY/MM/DD')}</p>
       </div>
 
       <div className={styles.right}>
-        <img alt="" className={styles.thumbnail} src={thumbnail ?? defaultThumbnail} />
+        <img alt="Thumbnail" className={styles.thumbnail} src={post.thumbnail} />
       </div>
     </CardLayout>
   );

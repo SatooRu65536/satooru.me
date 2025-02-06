@@ -1,6 +1,5 @@
 import type { DetailedHTMLProps, HTMLAttributes, ReactElement } from 'react';
 import { Link } from 'next-view-transitions';
-
 import styles from './index.module.scss';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {

@@ -17,7 +17,7 @@ export default function Page() {
       <WorksSection />
       <ExperiencesSection />
       <AwardsSection />
-      <RecentPostsSection articles={[]} />
+      <RecentPostsSection />
     </>
   );
 }
