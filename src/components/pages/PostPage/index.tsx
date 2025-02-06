@@ -5,27 +5,24 @@ import styles from './index.module.scss';
 import { Content } from '@/schemas/articlets';
 
 interface Props {
-  contents: Content[];
-  number: number;
+  post: Content | undefined;
 }
 
 function PostPage(props: Props) {
-  const { contents, number } = props;
+  const { post } = props;
 
-  const content = contents.find((content) => content.data.number === number);
-
-  if (content === undefined) {
+  if (post === undefined) {
     return <div>記事が見つかりませんでした</div>;
   }
 
   return (
     <div className={styles.post_container}>
-      <h1 className={styles.title}>{content.data.title}</h1>
-      <p className={styles.postedat}>{dayjs(content.data.updated_at).format('YYYY年MM月DD日')}</p>
+      <h1 className={styles.title}>{post.data.title}</h1>
+      <p className={styles.postedat}>{dayjs(post.data.updated_at).format('YYYY年MM月DD日')}</p>
 
-      <Thumbnail alt="thumbnail" height="300px" src={content.thumbnail} />
+      <Thumbnail alt="thumbnail" height="300px" src={post.thumbnail} />
 
-      <ToHtml className={styles.content} content={content.content} />
+      <ToHtml className={styles.content} content={post.content} />
     </div>
   );
 }

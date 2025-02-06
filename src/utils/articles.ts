@@ -53,8 +53,7 @@ export function getContent<T extends z.Schema>(number: number, zSchema?: T): z.i
   const content = _contents.find((content) => content.data.number === number);
 
   if (content === undefined) return undefined;
-  if (zSchema === undefined) return content.data;
-  return parseContent(content, zSchema);
+  return parseContent(content, zSchema ?? zContentSchema);
 }
 
 export function parseContent<T extends z.Schema>(content: RawContent, schema: T): z.infer<T> | undefined {

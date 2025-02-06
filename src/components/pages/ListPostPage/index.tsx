@@ -40,7 +40,7 @@ export default function ListPostPage(props: Props) {
   return (
     <div className={styles.container}>
       <section className={styles.categories_wrapper}>
-        <PostCategories categories={categories} currentCategory={decodedCategory} />
+        <PostCategories categories={categories} current={decodedCategory} />
       </section>
 
       <section className={styles.articles_wrapper}>
@@ -54,7 +54,7 @@ export default function ListPostPage(props: Props) {
       </section>
 
       <section className={styles.pagenation}>
-        <PageNation currentPage={page} pageTo={pageTo} totalArticles={allPosts.length} />
+        <PageNation page={page} pageTo={pageTo} totalArticles={allPosts.length} />
       </section>
     </div>
   );

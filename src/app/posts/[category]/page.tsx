@@ -13,10 +13,11 @@ export function generateStaticParams(): StaticSlug[] {
 }
 
 interface Props {
-  params: StaticSlug;
+  params: Promise<StaticSlug>;
 }
 
-export default function Page({ params: { category } }: Props): ReactElement {
+export default async function Page({ params }: Props): Promise<ReactElement> {
+  const { category } = await params;
   const contents = getContents({ category });
   const categories = getCategories();
   return <ListPostPage posts={contents} category={category} categories={categories} />;

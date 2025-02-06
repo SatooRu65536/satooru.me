@@ -1,63 +1,53 @@
-import type { ReactElement } from 'react';
+import { useMemo, type ReactElement } from 'react';
 import { PER_PAGE } from '@/const/setting';
 import { Link } from 'next-view-transitions';
 import styles from './index.module.scss';
+import { pipe } from 'remeda';
 
 interface Props {
   totalArticles: number;
-  currentPage: number;
+  page: number;
   pageTo: (page: number) => string;
 }
 
 const DISPLAY_PAGE_RANGE = 2;
 
 function PageNation(props: Props): ReactElement {
-  const { totalArticles, currentPage, pageTo } = props;
+  const { totalArticles, page, pageTo } = props;
 
-  const pages = Array.from({ length: Math.ceil(totalArticles / PER_PAGE) }, (_, i) => i + 1);
-  const rangeMin = Math.max(0, currentPage - DISPLAY_PAGE_RANGE - 1);
-  const rangeMax = Math.min(pages.length, currentPage + DISPLAY_PAGE_RANGE);
-  const displayPages = pages.slice(rangeMin, rangeMax);
+  const pageNum = Math.ceil(totalArticles / PER_PAGE);
 
-  const isFirstPageDisplayed = displayPages.at(0) === pages.at(0);
-  const isLastPageDisplayed = displayPages.at(-1) === pages.at(1) || displayPages.length === 1;
+  const displayPageNums = useMemo(
+    () =>
+      pipe(null, () => {
+        const min = page - DISPLAY_PAGE_RANGE < 1 ? 1 : page - DISPLAY_PAGE_RANGE;
+        const max = page + DISPLAY_PAGE_RANGE > pageNum ? pageNum : page + DISPLAY_PAGE_RANGE;
+        return Array.from({ length: max - min + 1 }, (_, i) => min + i);
+      }),
+    [],
+  );
 
   return (
     <div className={styles.pagenation}>
-      {!isFirstPageDisplayed && (
-        <>
-          <Link
-            className={styles.page_link}
-            data-current={currentPage === pages.at(0)}
-            href={pageTo(pages.at(0) ?? 1)}
-            key={pages.at(0)}
-          >
-            {pages.at(0)}
-          </Link>
-
-          <div className={styles.leader}>•••</div>
-        </>
+      {displayPageNums.at(0)! > 1 && (
+        <Link className={styles.page_link} data-current={page === 1} href={pageTo(1)}>
+          1
+        </Link>
       )}
+      {displayPageNums.at(0)! > 2 && <div className={styles.leader}>•••</div>}
 
-      {displayPages.map((page) => (
-        <Link className={styles.page_link} data-current={page === currentPage} href={pageTo(page)} key={page}>
-          {page}
+      {displayPageNums.map((p) => (
+        <Link className={styles.page_link} data-current={page === p} href={pageTo(p)} key={p}>
+          {p}
         </Link>
       ))}
 
-      {!isLastPageDisplayed && (
-        <>
-          <div className={styles.leader}>•••</div>
+      {displayPageNums.at(-1)! < pageNum - 1 && <div className={styles.leader}>•••</div>}
 
-          <Link
-            className={styles.page_link}
-            data-current={currentPage === pages.at(-1)}
-            href={pageTo(pages.at(-1) ?? 1)}
-            key={pages.at(-1)}
-          >
-            {pages.at(-1)}
-          </Link>
-        </>
+      {displayPageNums.at(-1)! < pageNum && (
+        <Link className={styles.page_link} data-current={page === pageNum} href={pageTo(pageNum)}>
+          {pageNum}
+        </Link>
       )}
     </div>
   );
