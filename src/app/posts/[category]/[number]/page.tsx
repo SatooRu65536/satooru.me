@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import { getContent, getContents } from '@/utils/articles';
 import PostPage from '@/components/pages/PostPage';
+import { groupBy, pipe } from 'remeda';
 
 interface StaticSlug {
   category: string;
@@ -9,7 +10,10 @@ interface StaticSlug {
 
 export function generateStaticParams(): StaticSlug[] {
   const contents = getContents({});
-  const groups = Object.groupBy(contents, (content) => content.data.category);
+  const groups = pipe(
+    contents,
+    groupBy((content) => content.data.category),
+  );
   return Object.entries(groups).flatMap(
     ([category, contents]) =>
       contents?.map((content) => ({

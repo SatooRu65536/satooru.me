@@ -8,6 +8,7 @@ import { useCallback } from 'react';
 import ListPostCard from './Card';
 import styles from './index.module.scss';
 import { Content } from '@/schemas/articlets';
+import { groupBy, pipe } from 'remeda';
 
 interface Props {
   posts: Content[];
@@ -19,7 +20,10 @@ export default function ListPostPage(props: Props) {
   const { posts, category, categories } = props;
 
   const decodedCategory = category !== undefined ? decodeURI(category) : category;
-  const groupedArticles = Object.groupBy(posts, (post) => post.data.category);
+  const groupedArticles = pipe(
+    posts,
+    groupBy((post) => post.data.category),
+  );
 
   const searchParams = useSearchParams();
   const page = Number.parseInt(searchParams.get('p') ?? '1');
