@@ -86,5 +86,5 @@ function _getThumbnail(content: string): string {
 
 function getIcons(content: string): string[] {
   const match = content.match(/<!-- icons: (.*) -->/);
-  return match?.at(1)?.split(',') ?? [];
+  return match?.at(1)?.split(',').map((icon) => icon.trim()) ?? [];
 }
