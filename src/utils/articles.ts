@@ -1,8 +1,7 @@
-import { Content, zContentSchema } from '@/schemas/articlets';
+import { zContentSchema } from '@/schemas/articlets';
 import { join } from 'path';
 import fs from 'fs';
 import matter, { type GrayMatterFile } from 'gray-matter';
-import { err, ok, Result } from 'neverthrow';
 import { z } from 'zod';
 
 const CONTENTS_PATH = '/contents';
@@ -43,7 +42,8 @@ export function getContents<T extends z.Schema = typeof zContentSchema>(
 ): z.infer<T>[] {
   const contents: z.infer<T>[] = _contents
     .map((content) => parseContent(content, zSchema ?? zContentSchema))
-    .filter((c) => c !== undefined);
+    .filter((c) => c !== undefined)
+    .sort((a, b) => (a?.data.updated_at > b?.data.updated_at ? -1 : 1));
 
   if (category === undefined) return contents.slice(0, limit);
   return contents.filter((content) => content.data.category === category).slice(0, limit);
