@@ -9,14 +9,12 @@ function RecentPostsSection(): ReactElement {
   const posts = getContents({ limit: 3 });
 
   return (
-    <SectionLayout title="Recent Posts">
-      <FadeInWithStagger className={styles.recent_posts}>
+    <SectionLayout title="Recent Posts" fadein={false}>
+      <div className={styles.recent_posts}>
         {posts.map((post) => (
-          <FadeIn className={styles.fadein} key={post.data.number}>
-            <PostCard post={post} />
-          </FadeIn>
+          <PostCard post={post} key={post.data.number} />
         ))}
-      </FadeInWithStagger>
+      </div>
     </SectionLayout>
   );
 }
