@@ -3,6 +3,7 @@ import CardLayout from '@/layouts/Card';
 import dayjs from 'dayjs';
 import styles from './index.module.scss';
 import { Content } from '@/schemas/articlets';
+import { toText } from '@/utils';
 
 interface Props {
   post: Content;
@@ -17,7 +18,7 @@ function PostCard(props: Props): ReactElement {
 
       <div className={styles.left}>
         <div className={styles.content}>
-          <p>{post.content.slice(0, 150)}</p>
+          <p>{toText(post.content).slice(0, 150)}</p>
         </div>
         <p className={styles.date}>{dayjs(post.data.updated_at).format('YYYY/MM/DD')}</p>
       </div>

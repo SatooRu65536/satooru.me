@@ -1,5 +1,4 @@
 import type { ReactElement } from 'react';
-import { FadeIn, FadeInWithStagger } from '@/components/shares/Fadein';
 import SectionLayout from '@/layouts/Section';
 import PostCard from './Card';
 import styles from './index.module.scss';
