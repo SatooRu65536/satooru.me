@@ -1,0 +1,56 @@
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: $fontsize-md;
+  }
+
+  .description {
+    font-size: $fontsize-sm;
+  }
+
+  .tech_wrapper {
+    padding-block: 10px 15px;
+    width: 100%;
+    overflow-x: scroll;
+
+    & > div {
+      width: fit-content;
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+
+    & > a {
+      height: 30px;
+      width: 40px;
+      padding: 5px;
+      background-color: $color-primary;
+      display: inline-block;
+      border-radius: 10px;
+      text-align: center;
+      transition: $transition;
+
+      &:hover {
+        background-color: $color-accent;
+      }
+
+      & > svg {
+        height: 20px;
+      }
+
+      & > svg,
+      & > svg path {
+        fill: $color-background;
+      }
+    }
+  }
+}

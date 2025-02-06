@@ -1,0 +1,13 @@
+.projects {
+  .fade_wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 30px;
+    gap: 30px;
+
+    .fade {
+      display: flex;
+    }
+  }
+}

@@ -18,6 +18,7 @@
     "jotai": "^2.11.3",
     "next": "15.1.6",
     "next-view-transitions": "^0.3.4",
+    "ofetch": "^1.4.1",
     "ohash": "^1.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,7 +1,18 @@
-import type { ExperienceProp } from '@/components/sections/Experiences';
 import type { ReactElement } from 'react';
 import { FadeIn } from '@/components/shares/Fadein';
 import styles from './index.module.scss';
+import { Dayjs } from 'dayjs';
+
+export interface ExperienceProp {
+  description: string;
+  organization: string;
+  start: Dayjs;
+  end?: Dayjs;
+  location?: string;
+  overview?: string;
+  url: string;
+  fill?: boolean;
+}
 
 interface Porps {
   experience: ExperienceProp;

@@ -1,4 +1,4 @@
-import type { ExperienceProp } from '@/components/sections/experiences';
+import type { ExperienceProp } from '@/components/sections/Experiences';
 
 import dayjs from 'dayjs';
 
