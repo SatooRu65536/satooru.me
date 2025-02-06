@@ -32,7 +32,7 @@ interface GetContentOptions {
 
 export function getCategories(): Set<string> {
   return new Set(
-    _contents.map((content) => parseContent(content, zContentSchema)?.data.category).filter((c) => c !== undefined),
+    _contents.map((content) => parseContent(content, zContentSchema)?.data.category).filter((c): c is string => c !== undefined),
   );
 }
 
