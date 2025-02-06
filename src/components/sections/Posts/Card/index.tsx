@@ -9,7 +9,7 @@ interface Props {
   post: Content;
 }
 
-function PostCard(props: Props): ReactElement {
+export default function PostCard(props: Props): ReactElement {
   const { post } = props;
 
   return (
@@ -29,5 +29,3 @@ function PostCard(props: Props): ReactElement {
     </CardLayout>
   );
 }
-
-export default PostCard;

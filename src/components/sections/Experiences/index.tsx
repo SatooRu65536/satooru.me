@@ -5,7 +5,7 @@ import { hash } from 'ohash';
 import styles from './index.module.scss';
 import ExperienceItem from './Item';
 
-function ExperiencesSection(): ReactElement {
+export default function ExperiencesSection(): ReactElement {
   const sortedExperiences = EXPERIENCES.sort((a, b) => a.start.diff(b.start));
 
   return (
@@ -16,5 +16,3 @@ function ExperiencesSection(): ReactElement {
     </SectionLayout>
   );
 }
-
-export default ExperiencesSection;

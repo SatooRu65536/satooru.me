@@ -11,7 +11,7 @@ interface Props {
   fixed?: boolean;
 }
 
-function Header({ fixed }: Props): ReactElement {
+export default function Header({ fixed }: Props): ReactElement {
   return (
     <header className={styles.header} data-fixed={fixed}>
       <img alt="アイコン" className={styles.icon} src="/icon.webp" />
@@ -27,5 +27,3 @@ function Header({ fixed }: Props): ReactElement {
     </header>
   );
 }
-
-export default Header;

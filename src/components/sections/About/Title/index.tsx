@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import styles from './index.module.scss';
 
-function Title(): ReactElement {
+export default function Title(): ReactElement {
   return (
     <div className={styles.title}>
       <img alt="アイコン" className={styles.icon} src="/icon.webp" />
@@ -9,5 +9,3 @@ function Title(): ReactElement {
     </div>
   );
 }
-
-export default Title;

@@ -6,7 +6,7 @@ import SectionLayout from '@/layouts/Section';
 import { hash } from 'ohash';
 import styles from './index.module.scss';
 
-function WorksSection(): ReactElement {
+export default function WorksSection(): ReactElement {
   return (
     <SectionLayout center title="Works">
       <FadeInWithStagger>
@@ -21,5 +21,3 @@ function WorksSection(): ReactElement {
     </SectionLayout>
   );
 }
-
-export default WorksSection;

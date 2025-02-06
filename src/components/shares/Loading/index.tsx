@@ -1,14 +1,12 @@
 import type { HTMLProps, ReactElement } from 'react';
 import styles from './index.module.scss';
 
-interface Props extends HTMLProps<HTMLDivElement> {}
+type Props = HTMLProps<HTMLDivElement>;
 
-function Loading(props: Props): ReactElement {
+export default function Loading(props: Props): ReactElement {
   return (
     <div {...props} className={styles.loading}>
       <div />
     </div>
   );
 }
-
-export default Loading;

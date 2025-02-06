@@ -8,7 +8,7 @@ interface Props {
   current?: string;
 }
 
-function PostCategories(props: Props): ReactElement {
+export default function PostCategories(props: Props): ReactElement {
   const { categories, current } = props;
 
   return (
@@ -18,17 +18,10 @@ function PostCategories(props: Props): ReactElement {
       </Link>
 
       {Array.from(categories).map((category) => (
-        <Link
-          className={styles.link}
-          data-selected={category === current}
-          href={`/posts/${category}`}
-          key={category}
-        >
+        <Link className={styles.link} data-selected={category === current} href={`/posts/${category}`} key={category}>
           {capitalize(category)}
         </Link>
       ))}
     </div>
   );
 }
-
-export default PostCategories;

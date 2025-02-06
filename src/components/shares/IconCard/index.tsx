@@ -8,7 +8,7 @@ interface Props {
   size: 'sm' | 'lg';
 }
 
-function IconCard(props: Props): ReactElement {
+export default function IconCard(props: Props): ReactElement {
   const { iconKey, size } = props;
 
   return (
@@ -18,5 +18,3 @@ function IconCard(props: Props): ReactElement {
     </div>
   );
 }
-
-export default IconCard;

@@ -4,7 +4,7 @@ import Icon from '@/components/shares/Icon';
 import { LINKS } from '@/const/links';
 import styles from './index.module.scss';
 
-function LinksSection(): ReactElement {
+export default function LinksSection(): ReactElement {
   return (
     <section className={styles.links}>
       <FadeInWithStagger>
@@ -22,5 +22,3 @@ function LinksSection(): ReactElement {
     </section>
   );
 }
-
-export default LinksSection;

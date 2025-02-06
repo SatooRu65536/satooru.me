@@ -13,11 +13,9 @@ interface Props extends Omit<FontAwesomeIconProps, 'icon'> {
   iconKey: AwesomeIconKey;
 }
 
-function Fontawesome(props: Props) {
+export default function Fontawesome(props: Props) {
   const { iconKey, ...rest } = props;
   const icon = IconsMap[iconKey];
 
   return <FontAwesomeIcon {...rest} icon={icon} />;
 }
-
-export default Fontawesome;

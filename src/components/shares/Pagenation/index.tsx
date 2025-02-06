@@ -12,7 +12,7 @@ interface Props {
 
 const DISPLAY_PAGE_RANGE = 2;
 
-function PageNation(props: Props): ReactElement {
+export default function PageNation(props: Props): ReactElement {
   const { totalArticles, page, pageTo } = props;
 
   const pageNum = Math.ceil(totalArticles / PER_PAGE);
@@ -24,7 +24,7 @@ function PageNation(props: Props): ReactElement {
         const max = page + DISPLAY_PAGE_RANGE > pageNum ? pageNum : page + DISPLAY_PAGE_RANGE;
         return Array.from({ length: max - min + 1 }, (_, i) => min + i);
       }),
-    [],
+    [page, pageNum],
   );
 
   return (
@@ -52,5 +52,3 @@ function PageNation(props: Props): ReactElement {
     </div>
   );
 }
-
-export default PageNation;

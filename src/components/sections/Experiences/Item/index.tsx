@@ -18,7 +18,7 @@ interface Porps {
   experience: Experience;
 }
 
-function ExperienceItem(props: Porps): ReactElement {
+export default function ExperienceItem(props: Porps): ReactElement {
   const { experience } = props;
 
   return (
@@ -47,5 +47,3 @@ function ExperienceItem(props: Porps): ReactElement {
     </FadeIn>
   );
 }
-
-export default ExperienceItem;

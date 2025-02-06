@@ -6,7 +6,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLEleme
   link?: string;
 }
 
-function CardLayout(props: Props): ReactElement {
+export default function CardLayout(props: Props): ReactElement {
   const { children, className, link, ...rest } = props;
 
   return (
@@ -16,5 +16,3 @@ function CardLayout(props: Props): ReactElement {
     </article>
   );
 }
-
-export default CardLayout;

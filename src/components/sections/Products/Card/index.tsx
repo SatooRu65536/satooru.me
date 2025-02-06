@@ -9,7 +9,7 @@ interface Props {
   product: Product;
 }
 
-function ProductCard(props: Props): ReactElement {
+export default function ProductCard(props: Props): ReactElement {
   const { product } = props;
 
   return (
@@ -34,4 +34,3 @@ function ProductCard(props: Props): ReactElement {
   );
 }
 
-export default ProductCard;

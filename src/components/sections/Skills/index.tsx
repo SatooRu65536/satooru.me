@@ -5,7 +5,7 @@ import { SKILLS } from '@/const/skills';
 import SectionLayout from '@/layouts/Section';
 import styles from './index.module.scss';
 
-function SkillsSection(): ReactElement {
+export default function SkillsSection(): ReactElement {
   return (
     <SectionLayout title="Skills">
       <FadeInWithStagger className={styles.grid} speed={0.01}>
@@ -18,5 +18,3 @@ function SkillsSection(): ReactElement {
     </SectionLayout>
   );
 }
-
-export default SkillsSection;

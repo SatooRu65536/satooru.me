@@ -7,7 +7,7 @@ interface Props {
   children: ReactNode;
 }
 
-function PageLayout(props: Props): ReactElement {
+export default function PageLayout(props: Props): ReactElement {
   const { children } = props;
 
   return (
@@ -18,5 +18,3 @@ function PageLayout(props: Props): ReactElement {
     </>
   );
 }
-
-export default PageLayout;

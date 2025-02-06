@@ -4,7 +4,7 @@ import { ABOUT } from '@/const/about';
 import SectionLayout from '@/layouts/Section';
 import Title from './Title/index';
 
-function AbountSection(): ReactElement {
+export default function AbountSection(): ReactElement {
   return (
     <SectionLayout fadein={false} title={<Title />} underline>
       <FadeIn direction="left">
@@ -13,5 +13,3 @@ function AbountSection(): ReactElement {
     </SectionLayout>
   );
 }
-
-export default AbountSection;

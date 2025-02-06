@@ -13,9 +13,9 @@ export interface ListItemProps {
   dateFormat?: string;
 }
 
-interface Props extends ListItemProps {}
+type Props = ListItemProps;
 
-function ListItem(props: Props): ReactElement {
+export default function ListItem(props: Props): ReactElement {
   const { date, type, title, link, description, dateFormat } = props;
   const dateFormatSnap = dateFormat ?? 'YYYY/MM/DD';
 
@@ -28,11 +28,7 @@ function ListItem(props: Props): ReactElement {
       </p>
 
       <p className={styles.main}>
-        <span>
-          [
-          {type}
-          ]
-        </span>
+        <span>[{type}]</span>
         <span className={styles.title}>{title}</span>
         {link !== undefined && (
           <a className={styles.link} href={link}>
@@ -45,5 +41,3 @@ function ListItem(props: Props): ReactElement {
     </li>
   );
 }
-
-export default ListItem;

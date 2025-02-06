@@ -15,7 +15,7 @@ interface Props {
   className: string;
 }
 
-function ToHtml(props: Props): ReactElement {
+export default function ToHtml(props: Props): ReactElement {
   const { content, className } = props;
 
   return (
@@ -24,17 +24,15 @@ function ToHtml(props: Props): ReactElement {
       components={{
         code({ children, className, ...rest }) {
           const match = /language-(\w+)/.exec(className ?? '');
-          return match
-            ? (
-                <Prism PreTag="div" language={match[1]} showLineNumbers>
-                  {String(children).replace(/\n$/, '')}
-                </Prism>
-              )
-            : (
-                <code {...rest} className={className}>
-                  {children}
-                </code>
-              );
+          return match ? (
+            <Prism PreTag="div" language={match[1]} showLineNumbers>
+              {String(children).replace(/\n$/, '')}
+            </Prism>
+          ) : (
+            <code {...rest} className={className}>
+              {children}
+            </code>
+          );
         },
       }}
       remarkPlugins={[remarkBreaks, remarkGfm, remarkRehype, rehypeRaw, rehypeStringify]}
@@ -43,5 +41,3 @@ function ToHtml(props: Props): ReactElement {
     </ReactMarkdown>
   );
 }
-
-export default ToHtml;

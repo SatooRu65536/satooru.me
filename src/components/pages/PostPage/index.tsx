@@ -8,7 +8,7 @@ interface Props {
   post: Content | undefined;
 }
 
-function PostPage(props: Props) {
+export default function PostPage(props: Props) {
   const { post } = props;
 
   if (post === undefined) {
@@ -26,5 +26,3 @@ function PostPage(props: Props) {
     </div>
   );
 }
-
-export default PostPage;

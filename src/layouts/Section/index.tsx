@@ -12,7 +12,7 @@ interface Props {
   className?: string;
 }
 
-function SectionLayout(props: Props): ReactElement {
+export default function SectionLayout(props: Props): ReactElement {
   const { children, center, title, leftSpace, underline, fadein, className } = props;
 
   return (
@@ -48,5 +48,3 @@ function FadeWrapper({ fadein, underline, children }: FadeProps) {
     </FadeIn>
   );
 }
-
-export default SectionLayout;

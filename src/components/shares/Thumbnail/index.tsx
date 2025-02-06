@@ -8,7 +8,7 @@ interface Props {
   hovered?: boolean;
 }
 
-function Thumbnail(props: Props): ReactElement {
+export default function Thumbnail(props: Props): ReactElement {
   const { src, alt, height, hovered = false } = props;
 
   return (
@@ -17,5 +17,3 @@ function Thumbnail(props: Props): ReactElement {
     </div>
   );
 }
-
-export default Thumbnail;

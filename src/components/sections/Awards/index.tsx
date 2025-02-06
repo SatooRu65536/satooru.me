@@ -5,7 +5,7 @@ import { AWARD } from '@/const/awards';
 import SectionLayout from '@/layouts/Section';
 import styles from './index.module.scss';
 
-function AwardsSection(): ReactElement {
+export default function AwardsSection(): ReactElement {
   return (
     <SectionLayout center title="Awards">
       <ul className={styles.award}>
@@ -18,5 +18,3 @@ function AwardsSection(): ReactElement {
     </SectionLayout>
   );
 }
-
-export default AwardsSection;

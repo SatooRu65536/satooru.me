@@ -13,7 +13,7 @@ interface Props {
   site?: string;
 }
 
-function ProjectCard(props: Props): ReactElement {
+export default function ProjectCard(props: Props): ReactElement {
   const { title, description, techs, repository, site } = props;
 
   return (
@@ -42,5 +42,3 @@ function ProjectCard(props: Props): ReactElement {
     </CardLayout>
   );
 }
-
-export default ProjectCard;
