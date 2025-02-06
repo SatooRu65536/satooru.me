@@ -4,10 +4,15 @@ import { z } from 'zod';
 const POST_DEFAULT_THUMBNAIL = '/penguin.webp';
 const FIRST_IMAGE_REGEX = /\s*(<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\))/;
 
-export const zContentDataSchema = _esaSchema({});
+export const zContentDataSchema = _esaSchema({
+  date: z.coerce.date().optional(),
+});
 export type ContentData = z.infer<typeof zContentDataSchema>;
 
-export const zProductDataSchema = _esaSchema({ type: z.string().default('その他') });
+export const zProductDataSchema = _esaSchema({
+  date: z.coerce.date().optional(),
+  type: z.string().default('その他'),
+});
 export type ProductData = z.infer<typeof zProductDataSchema>;
 
 export const zContentSchema = _contentSchem(zContentDataSchema);
@@ -45,12 +50,7 @@ function _esaSchema<T extends Record<string, z.Schema>>(tagsSchema: T) {
         });
 
         const noneNullEntries = entries.filter((entry): entry is [string, string] => entry !== null);
-        return z
-          .object<T>({
-            date: z.coerce.date().optional(),
-            ...tagsSchema,
-          })
-          .parse(Object.fromEntries(noneNullEntries));
+        return z.object<T>(tagsSchema).parse(Object.fromEntries(noneNullEntries));
       }, z.object(tagsSchema)),
       created_at: z.coerce.date(),
       updated_at: z.coerce.date(),
@@ -86,5 +86,10 @@ function _getThumbnail(content: string): string {
 
 function getIcons(content: string): string[] {
   const match = content.match(/<!-- icons: (.*) -->/);
-  return match?.at(1)?.split(',').map((icon) => icon.trim()) ?? [];
+  return (
+    match
+      ?.at(1)
+      ?.split(',')
+      .map((icon) => icon.trim()) ?? []
+  );
 }
