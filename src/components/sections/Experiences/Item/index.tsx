@@ -3,7 +3,7 @@ import { FadeIn } from '@/components/shares/Fadein';
 import styles from './index.module.scss';
 import { Dayjs } from 'dayjs';
 
-export interface ExperienceProp {
+export interface Experience {
   description: string;
   organization: string;
   start: Dayjs;
@@ -15,7 +15,7 @@ export interface ExperienceProp {
 }
 
 interface Porps {
-  experience: ExperienceProp;
+  experience: Experience;
 }
 
 function ExperienceItem(props: Porps): ReactElement {

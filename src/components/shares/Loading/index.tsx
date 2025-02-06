@@ -1,5 +1,4 @@
 import type { HTMLProps, ReactElement } from 'react';
-
 import styles from './index.module.scss';
 
 interface Props extends HTMLProps<HTMLDivElement> {}

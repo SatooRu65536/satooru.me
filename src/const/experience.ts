@@ -1,8 +1,7 @@
-import type { ExperienceProp } from '@/components/sections/Experiences';
-
+import { Experience } from '@/components/sections/Experiences/Item';
 import dayjs from 'dayjs';
 
-export const EXPERIENCES: ExperienceProp[] = [
+export const EXPERIENCES: Experience[] = [
   {
     description: '名電高校 入学',
     organization: 'Meiden H.S.',

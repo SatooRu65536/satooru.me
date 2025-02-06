@@ -1,5 +1,4 @@
 import type { ReactElement } from 'react';
-
 import styles from './index.module.scss';
 
 function Title(): ReactElement {

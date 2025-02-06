@@ -1,8 +1,6 @@
 import type { IconKey } from '@/components/shares/Icon';
 import type { ReactElement } from 'react';
-
 import Icon, { IconMap } from '@/components/shares/Icon';
-
 import styles from './index.module.scss';
 
 interface Props {
