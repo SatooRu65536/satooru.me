@@ -1,49 +1,60 @@
 import { Content, zContentSchema } from '@/schemas/articlets';
 import { join } from 'path';
 import fs from 'fs';
-import matter from 'gray-matter';
+import matter, { type GrayMatterFile } from 'gray-matter';
 import { err, ok, Result } from 'neverthrow';
-import { ZodIssue } from 'zod';
+import { z } from 'zod';
 
 const CONTENTS_PATH = '/contents';
+type RawContent = GrayMatterFile<string>;
 
-function getFilePaths(articlesDir: string): string[] {
+const _contents: RawContent[] = _getContents();
+
+function _getFilePaths(articlesDir: string): string[] {
   const files = fs.readdirSync(articlesDir);
   const filteredFiles = files.filter((f) => !f.startsWith('.'));
   return filteredFiles.map((f) => join(articlesDir, f));
 }
 
-function readFile(filePath: string): Result<Content, ZodIssue[]> {
+function _readFile(filePath: string): RawContent {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const md = matter(fileContent);
-
-  const post = zContentSchema.safeParse(md);
-  if (post.success) return ok(post.data);
-  return err(post.error.errors);
+  return matter(fileContent);
 }
 
-function _getContents(): Content[] {
+function _getContents(): RawContent[] {
   const contentsDir = join(process.cwd(), CONTENTS_PATH);
-  const contents = getFilePaths(contentsDir)
-    .map((filePath) => readFile(filePath))
-    .filter((content) => content.isOk())
-    .map((content) => content.value)
-    .sort((a, b) => (a.data.updated_at > b.data.updated_at ? -1 : 1));
-  return contents;
+  return _getFilePaths(contentsDir).map((filePath) => _readFile(filePath));
 }
-
-const contents = _getContents();
 
 interface GetContentOptions {
   category?: string;
   limit?: number;
 }
 
-export function getContents({ category, limit }: GetContentOptions): Content[] {
+export function getContents<T extends z.Schema = typeof zContentSchema>(
+  { category, limit }: GetContentOptions,
+  zSchema?: T,
+): z.infer<T>[] {
+  const contents: z.infer<T>[] = _contents
+    .map((content) => parseContent(content, zSchema ?? zContentSchema))
+    .filter((c) => c !== undefined);
+
   if (category === undefined) return contents.slice(0, limit);
   return contents.filter((content) => content.data.category === category).slice(0, limit);
 }
 
-export function getContent(number: number): Content | undefined {
-  return contents.find((content) => content.data.number === number);
+export function getContent<T extends z.Schema>(number: number, zSchema?: T): z.infer<T> | undefined {
+  const content = _contents.find((content) => content.data.number === number);
+
+  if (content === undefined) return undefined;
+  if (zSchema === undefined) return content.data;
+  return parseContent(content, zSchema);
+}
+
+export function parseContent<T extends z.Schema>(content: RawContent, schema: T): z.infer<T> | undefined {
+  const res = schema.safeParse(content);
+  if (res.success) return res.data;
+
+  console.error(res.error.errors);
+  throw new Error('Failed to parse content');
 }

@@ -1,21 +1,25 @@
+import { ICON_KEYS, IconKey } from '@/components/shares/Icon';
 import { z } from 'zod';
 
-const POST_DEFAULT_THUMBNAIL = '/images/penguin.webp';
+const POST_DEFAULT_THUMBNAIL = '/penguin.webp';
 const FIRST_IMAGE_REGEX = /\s*(<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\))/;
 
-export const zContentDataSchema = esaSchema({});
+export const zContentDataSchema = _esaSchema({});
 export type ContentData = z.infer<typeof zContentDataSchema>;
 
-export const zProductDataSchema = esaSchema({ type: z.string().default('その他') });
+export const zProductDataSchema = _esaSchema({ type: z.string().default('その他') });
 export type ProductData = z.infer<typeof zProductDataSchema>;
 
-export const zContentSchema = contentSchem(zContentDataSchema);
+export const zContentSchema = _contentSchem(zContentDataSchema);
 export type Content = z.infer<typeof zContentSchema>;
 
-export const zProductSchema = contentSchem(zProductDataSchema);
+export const zProductSchema = _contentSchem(zProductDataSchema).transform(({ content, ...d }) => {
+  const techIcons = getIcons(content).filter((icon): icon is IconKey => ICON_KEYS.includes(icon));
+  return { ...d, content, techIcons };
+});
 export type Product = z.infer<typeof zProductSchema>;
 
-function esaSchema<T extends Record<string, z.Schema>>(tagsSchema: T) {
+function _esaSchema<T extends Record<string, z.Schema>>(tagsSchema: T) {
   return z
     .object({
       title: z.string(),
@@ -56,11 +60,11 @@ function esaSchema<T extends Record<string, z.Schema>>(tagsSchema: T) {
     .transform(({ category, tags, ...esa }) => {
       const date: Date = tags?.date ?? esa.updated_at;
       const link = `/posts/${category.category}/${esa.number}`;
-      return { ...esa, ...category, updated_at: date, ...tags, link };
+      return { ...esa, ...category, updated_at: date, tags, link };
     });
 }
 
-function contentSchem<T extends z.Schema>(dataSchema: T) {
+function _contentSchem<T extends z.Schema>(dataSchema: T) {
   return z
     .object({
       data: dataSchema,
@@ -70,12 +74,17 @@ function contentSchem<T extends z.Schema>(dataSchema: T) {
       language: z.string(),
     })
     .transform(({ content, ...d }) => {
-      const thumbnail = getThumbnail(content);
+      const thumbnail = _getThumbnail(content);
       return { ...d, thumbnail, content };
     });
 }
 
-function getThumbnail(content: string): string {
+function _getThumbnail(content: string): string {
   const match = content.match(FIRST_IMAGE_REGEX);
   return (match && (match[2] || match[3])) ?? POST_DEFAULT_THUMBNAIL;
+}
+
+function getIcons(content: string): string[] {
+  const match = content.match(/<!-- icons: (.*) -->/);
+  return match?.at(1)?.split(',') ?? [];
 }

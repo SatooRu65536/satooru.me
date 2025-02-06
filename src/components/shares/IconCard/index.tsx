@@ -1,6 +1,6 @@
 import type { IconKey } from '@/components/shares/Icon';
 import type { ReactElement } from 'react';
-import Icon, { IconMap } from '@/components/shares/Icon';
+import Icon, { ICON_MAP } from '@/components/shares/Icon';
 import styles from './index.module.scss';
 
 interface Props {
@@ -14,7 +14,7 @@ function IconCard(props: Props): ReactElement {
   return (
     <div className={styles.icon} data-size={size}>
       <Icon iconKey={iconKey} size={size === 'lg' ? 48 : 32} />
-      <p>{IconMap[iconKey].name}</p>
+      <p>{ICON_MAP[iconKey].name}</p>
     </div>
   );
 }
