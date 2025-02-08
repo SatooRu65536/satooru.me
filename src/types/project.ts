@@ -1,9 +1,7 @@
-import { IconKey } from '@/components/shares/Icon';
-
 export interface Project {
   name: string;
   summary: string;
-  tags: IconKey[];
+  tags: string[];
   repository: string;
   site: string | undefined;
   updatedAt: string;

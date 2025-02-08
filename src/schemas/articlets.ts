@@ -1,4 +1,4 @@
-import { ICON_KEYS, IconKey } from '@/components/shares/Icon';
+import { filterIconKeys } from '@/utils/icon';
 import { z } from 'zod';
 
 const POST_DEFAULT_THUMBNAIL = '/penguin.webp';
@@ -19,7 +19,7 @@ export const zContentSchema = _contentSchem(zContentDataSchema);
 export type Content = z.infer<typeof zContentSchema>;
 
 export const zProductSchema = _contentSchem(zProductDataSchema).transform(({ content, ...d }) => {
-  const techIcons = getIcons(content).filter((icon): icon is IconKey => ICON_KEYS.includes(icon));
+  const techIcons = filterIconKeys(getIcons(content));
   return { ...d, content, techIcons };
 });
 export type Product = z.infer<typeof zProductSchema>;

@@ -2,6 +2,7 @@
 
 import { FadeIn, FadeInWithStagger } from '@/components/shares/Fadein';
 import { projectsAtom } from '@/stores/projectsAtom';
+import { filterIconKeys } from '@/utils/icon';
 import { useAtomValue } from 'jotai';
 import ProjectCard from './Card';
 import styles from './index.module.scss';
@@ -17,7 +18,7 @@ export function InnerProjectsSection() {
             description={project.summary}
             repository={project.repository}
             site={project.site}
-            techs={project.tags}
+            techs={filterIconKeys(project.tags)}
             title={project.name}
           />
         </FadeIn>
