@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { Content } from '@/schemas/articlets';
+import { Content } from '@/schemas/articles';
 import Inner from './Inner';
 import Loading from '@/components/shares/Loading';
 

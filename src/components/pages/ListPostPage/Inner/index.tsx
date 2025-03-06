@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';
 import ListPostCard from './Card';
 import styles from './index.module.scss';
-import { Content } from '@/schemas/articlets';
+import { Content } from '@/schemas/articles';
 import { groupBy, pipe } from 'remeda';
 
 interface Props {

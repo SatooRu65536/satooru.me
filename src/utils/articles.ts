@@ -1,4 +1,4 @@
-import { zContentSchema } from '@/schemas/articlets';
+import { zContentSchema } from '@/schemas/articles';
 import { join } from 'path';
 import fs from 'fs';
 import matter, { type GrayMatterFile } from 'gray-matter';

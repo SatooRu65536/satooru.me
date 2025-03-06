@@ -3,7 +3,7 @@ import Icon from '@/components/shares/Icon';
 import CardLayout from '@/layouts/Card';
 import dayjs from 'dayjs';
 import styles from './index.module.scss';
-import { Product } from '@/schemas/articlets';
+import { Product } from '@/schemas/articles';
 
 interface Props {
   product: Product;

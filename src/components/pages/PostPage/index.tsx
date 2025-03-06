@@ -2,7 +2,7 @@ import Thumbnail from '@/components/shares/Thumbnail';
 import ToHtml from '@/components/shares/ToHtml';
 import dayjs from 'dayjs';
 import styles from './index.module.scss';
-import { Content } from '@/schemas/articlets';
+import { Content } from '@/schemas/articles';
 
 interface Props {
   post: Content | undefined;
