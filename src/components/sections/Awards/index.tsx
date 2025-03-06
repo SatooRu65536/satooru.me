@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { FadeIn } from '@/components/shares/Fadein';
+import { FadeIn } from '@/components/shares/FadeIn';
 import ListItem from '@/components/shares/ListItem';
 import { AWARD } from '@/const/awards';
 import SectionLayout from '@/layouts/Section';

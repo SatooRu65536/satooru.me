@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { FadeIn, FadeInWithStagger } from '@/components/shares/Fadein';
+import { FadeIn, FadeInWithStagger } from '@/components/shares/FadeIn';
 import Icon from '@/components/shares/Icon';
 import { LINKS } from '@/const/links';
 import styles from './index.module.scss';

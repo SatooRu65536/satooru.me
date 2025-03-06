@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react';
-import { FadeIn } from '@/components/shares/Fadein';
+import { FadeIn } from '@/components/shares/FadeIn';
 import styles from './index.module.scss';
 
 interface Props {
