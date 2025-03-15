@@ -55,9 +55,12 @@ import {
   SiRust,
   SiHugo,
   SiSwift,
+  SiTensorflow,
+  SiFlutter,
+  SiTailwindcss,
+  SiAwslambda,
 } from '@icons-pack/react-simple-icons';
 import { getKeys } from '@/utils';
-import { s } from 'framer-motion/client';
 
 export const ICON_MAP = {
   astro: { name: 'Astro', icon: SiAstro },
@@ -73,6 +76,7 @@ export const ICON_MAP = {
   eslint: { name: 'ESLint', icon: SiEslint },
   fastapi: { name: 'FastAPI', icon: SiFastapi },
   firebase: { name: 'Firebase', icon: SiFirebase },
+  flutter: { name: 'Flutter', icon: SiFlutter },
   git: { name: 'Git', icon: SiGit },
   github: { name: 'GitHub', icon: SiGithub },
   'github-actions': { name: 'GitHub Actions', icon: SiGithubactions },
@@ -83,6 +87,7 @@ export const ICON_MAP = {
   javascript: { name: 'JavaScript', icon: SiJavascript },
   jupyter: { name: 'Jupyter', icon: SiJupyter },
   jest: { name: 'Jest', icon: SiJest },
+  lambda: { name: 'AWS Lambda', icon: SiAwslambda },
   mantine: { name: 'Mantine', icon: SiMantine },
   mysql: { name: 'MySQL', icon: SiMysql },
   numpy: { name: 'NumPy', icon: SiNumpy },
@@ -109,8 +114,10 @@ export const ICON_MAP = {
   swift: { name: 'Swift', icon: SiSwift },
   tauri: { name: 'Tauri', icon: SiTauri },
   threejs: { name: 'Three.js', icon: SiThreedotjs },
+  tensorflow: { name: 'TensorFlow', icon: SiTensorflow },
   typescript: { name: 'TypeScript', icon: SiTypescript },
   trpc: { name: 'trpc', icon: SiTrpc },
+  tailwindcss: { name: 'Tailwind CSS', icon: SiTailwindcss },
   unjs: { name: 'Un.js', icon: SiUnjs },
   vite: { name: 'Vite', icon: SiVite },
   vitest: { name: 'Vitest', icon: SiVitest },
