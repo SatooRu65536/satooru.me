@@ -17,7 +17,7 @@ type Props = ListItemProps;
 
 export default function ListItem(props: Props): ReactElement {
   const { date, type, title, link, description, dateFormat } = props;
-  const dateFormatSnap = dateFormat ?? 'YYYY/MM/DD';
+  const dateFormatSnap = dateFormat ?? 'YYYY.MM.DD';
 
   return (
     <li className={styles.lit_item}>

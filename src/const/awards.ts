@@ -23,7 +23,7 @@ export const AWARD: ListItemProps[] = [
     title: '高校生エンジニア体験',
     type: '一般公開',
     description: 'aiboの可愛い仕草をみながらすごろくをするアプリ',
-    link: '/posts/product/59',
+    link: '/posts/product/63',
     dateFormat: 'YYYY.MM',
   },
   {
@@ -59,7 +59,7 @@ export const AWARD: ListItemProps[] = [
     title: '技育CAMP アドバンス vol.3',
     type: '企業賞',
     description: '紙を破いてPCを操作するアプリ',
-    link: '/posts/63',
+    link: '/posts/product/63',
   },
   {
     date: dayjs('2023-10-02'),
@@ -75,4 +75,11 @@ export const AWARD: ListItemProps[] = [
     description: '初心者が音楽制作の第一歩を踏み出せるアプリ',
     link: '/posts/product/139',
   },
+  {
+    date: dayjs('2025-03-13'),
+    title: '情報処理学会 第87回全国大会',
+    type: '学生奨励賞',
+    description: 'モーションキャプチャで得られる3次元の骨格情報を用いた調理行動の分類に関する基礎検討',
+    link: '/posts/report/161',
+  }
 ];
