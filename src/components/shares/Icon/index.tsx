@@ -52,6 +52,8 @@ import {
   SiVitest,
   SiVuedotjs,
   SiX,
+  SiRust,
+  SiHugo,
 } from '@icons-pack/react-simple-icons';
 import { getKeys } from '@/utils';
 
@@ -74,6 +76,7 @@ export const ICON_MAP = {
   'github-actions': { name: 'GitHub Actions', icon: SiGithubactions },
   hono: { name: 'Hono', icon: SiHono },
   html: { name: 'HTML', icon: SiHtml5 },
+  hugo: { name: 'Hugo', icon: SiHugo },
   instagram: { name: 'Instagram', icon: SiInstagram },
   javascript: { name: 'JavaScript', icon: SiJavascript },
   jupyter: { name: 'Jupyter', icon: SiJupyter },
@@ -95,6 +98,7 @@ export const ICON_MAP = {
   remix: { name: 'Remix', icon: SiRemix },
   rails: { name: 'Ruby on Rails', icon: SiRubyonrails },
   recoil: { name: 'Recoil', icon: SiRecoil },
+  rust: { name: 'Rust', icon: SiRust },
   scss: { name: 'SCSS', icon: SiSass },
   'styled-components': { name: 'styled-components', icon: SiStyledcomponents },
   storybook: { name: 'Storybook', icon: SiStorybook },
