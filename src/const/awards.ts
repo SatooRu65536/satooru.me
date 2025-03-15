@@ -82,4 +82,4 @@ export const AWARD: ListItemProps[] = [
     description: 'モーションキャプチャで得られる3次元の骨格情報を用いた調理行動の分類に関する基礎検討',
     link: '/posts/report/161',
   }
-];
+].reverse();
