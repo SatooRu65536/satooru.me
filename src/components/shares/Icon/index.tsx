@@ -54,8 +54,10 @@ import {
   SiX,
   SiRust,
   SiHugo,
+  SiSwift,
 } from '@icons-pack/react-simple-icons';
 import { getKeys } from '@/utils';
+import { s } from 'framer-motion/client';
 
 export const ICON_MAP = {
   astro: { name: 'Astro', icon: SiAstro },
@@ -104,6 +106,7 @@ export const ICON_MAP = {
   storybook: { name: 'Storybook', icon: SiStorybook },
   svelte: { name: 'Svelte', icon: SiSvelte },
   supabase: { name: 'Supabase', icon: SiSupabase },
+  swift: { name: 'Swift', icon: SiSwift },
   tauri: { name: 'Tauri', icon: SiTauri },
   threejs: { name: 'Three.js', icon: SiThreedotjs },
   typescript: { name: 'TypeScript', icon: SiTypescript },
