@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const CONTENTS_DIR = 'contents';
+const IGNORE_EXTENSIONS = ['.webp', '.svg', '.gif'];
 const IMAGE_REGEX = /<img.*?src=['"](\S*?)['"].*>|!\[.*\]\(([^)]+\.\w{1,5})/g;
 const IMAGE_SRC_REGEX = /src=['"](\S*?)['"]/;
 const IMAGE_MARKDOWN_REGEX = /!\[.*\]\(([^)]+\.\w{1,5})/;
@@ -88,12 +89,10 @@ function saveAndReplaceImages(content: string): string {
 
     const imageSrc = toWebpPath(imagePath);
 
-    // 画像のURLを置換
-    if (imageSrc) content = content.replace(imagePath, imageSrc);
-    return {
-      original: imagePath,
-      replaced: imageSrc,
-    };
+    if (IGNORE_EXTENSIONS.some((ext) => imagePath.endsWith(ext))) return;
+    if (!imageSrc) return;
+
+    content = content.replace(imagePath, imageSrc);
   });
 
   return content;
