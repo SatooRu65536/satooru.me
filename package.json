@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "download": "jiti ./script/download.ts",
+    "convert": "jiti ./script/convert.ts",
+    "resize": "source ./script/resize.sh"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
@@ -41,6 +44,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "axios": "^1.8.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "prettier": "^3.4.2",
