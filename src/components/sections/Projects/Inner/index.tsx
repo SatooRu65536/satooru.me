@@ -1,6 +1,6 @@
 'use client';
 
-import { FadeIn, FadeInWithStagger } from '@/components/shares/FadeIn';
+import { FadeIn, FadeInWithStagger } from '@/components/shares/Fadein';
 import { projectsAtom } from '@/stores/projectsAtom';
 import { filterIconKeys } from '@/utils/icon';
 import { useAtomValue } from 'jotai';

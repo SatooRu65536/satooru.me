@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { FadeIn, FadeInWithStagger } from '@/components/shares/FadeIn';
+import { FadeIn, FadeInWithStagger } from '@/components/shares/Fadein';
 import ListItem from '@/components/shares/ListItem';
 import { WORKS } from '@/const/works';
 import SectionLayout from '@/layouts/Section';

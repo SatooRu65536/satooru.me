@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { FadeIn } from '@/components/shares/FadeIn';
+import { FadeIn } from '@/components/shares/Fadein';
 import styles from './index.module.scss';
 import { Dayjs } from 'dayjs';
 
