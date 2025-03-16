@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 import styles from './index.module.scss';
 import { Content } from '@/schemas/articles';
 import { toText } from '@/utils';
-import classNames from 'classnames';
 
 interface Props {
   post: Content;

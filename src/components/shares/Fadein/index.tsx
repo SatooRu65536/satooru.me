@@ -7,7 +7,7 @@ import React, { createContext, useContext, useMemo } from 'react';
 const StaggerContext = createContext(false);
 const viewport = { once: true, margin: '0px 0px -120px' };
 
-interface FadeInProps extends ComponentPropsWithoutRef<'div'> {
+interface FadeInProps extends ComponentPropsWithoutRef<typeof motion.div> {
   direction?: 'left' | 'up';
 }
 
