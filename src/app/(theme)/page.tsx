@@ -1,4 +1,4 @@
-import AbountSection from '@/components/sections/About';
+import AboutSection from '@/components/sections/About';
 import AwardsSection from '@/components/sections/Awards';
 import ExperiencesSection from '@/components/sections/Experiences';
 import LinksSection from '@/components/sections/Links';
@@ -11,7 +11,7 @@ import WorksSection from '@/components/sections/Works';
 export default function Page() {
   return (
     <>
-      <AbountSection />
+      <AboutSection />
       <LinksSection />
       <SkillsSection />
       <ProjectsSection />
