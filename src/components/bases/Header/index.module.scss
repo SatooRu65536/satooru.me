@@ -20,16 +20,21 @@
     padding-inline: 20px;
   }
 
-  .icon {
-    height: 40px;
-  }
+  .title_container {
+    display: contents;
 
-  .title {
-    font-size: $fontsize-lg;
-    font-weight: normal;
+    .icon {
+      height: 40px;
+    }
 
-    @include mobile {
-      font-size: $fontsize-md;
+    .title {
+      font-size: $fontsize-lg;
+      font-weight: normal;
+      color: $color-text;
+
+      @include mobile {
+        font-size: $fontsize-md;
+      }
     }
   }
 
