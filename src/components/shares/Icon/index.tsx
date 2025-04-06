@@ -59,10 +59,12 @@ import {
   SiFlutter,
   SiTailwindcss,
   SiAwslambda,
+  SiAmazonwebservices
 } from '@icons-pack/react-simple-icons';
 import { getKeys } from '@/utils';
 
 export const ICON_MAP = {
+  aws: { name: 'AWS', icon: SiAmazonwebservices },
   astro: { name: 'Astro', icon: SiAstro },
   biome: { name: 'Biome', icon: SiBiome },
   c: { name: 'C言語', icon: SiC },
