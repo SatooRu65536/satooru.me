@@ -4,6 +4,7 @@ import styles from './index.module.scss';
 
 const LINKS = [
   { title: 'Home', href: '/' },
+  { title: 'About', href: '/about' },
   { title: 'Posts', href: '/posts' },
 ];
 
