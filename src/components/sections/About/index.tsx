@@ -4,6 +4,7 @@ import { ABOUT } from '@/const/about';
 import SectionLayout from '@/layouts/Section';
 import Title from './Title/index';
 import styles from './index.module.scss';
+import { Link } from 'next-view-transitions';
 
 export default function AbountSection(): ReactElement {
   return (
@@ -12,7 +13,7 @@ export default function AbountSection(): ReactElement {
         <p>{ABOUT}</p>
 
         <div className={styles.detail}>
-          <a href="/about">詳細</a>
+          <Link href="/about">詳細</Link>
         </div>
       </FadeIn>
     </SectionLayout>
