@@ -6,6 +6,7 @@ const LINKS = [
   { title: 'Home', href: '/' },
   { title: 'About', href: '/about' },
   { title: 'Posts', href: '/posts' },
+  { title: 'Research', href: '/research' },
 ];
 
 interface Props {
