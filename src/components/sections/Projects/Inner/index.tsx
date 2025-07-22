@@ -12,17 +12,27 @@ export function InnerProjectsSection() {
 
   return (
     <FadeInWithStagger className={styles.fade_wrapper}>
-      {projects.map((project) => (
-        <FadeIn className={styles.fade} key={project.name}>
-          <ProjectCard
-            description={project.summary}
-            repository={project.repository}
-            site={project.site}
-            techs={filterIconKeys(project.tags)}
-            title={project.name}
-          />
+      <p>GitHub API から取得しています</p>
+
+      <div className={styles.projects}>
+        {projects.map((project) => (
+          <FadeIn className={styles.fade} key={project.name}>
+            <ProjectCard
+              description={project.summary}
+              repository={project.repository}
+              site={project.site}
+              techs={filterIconKeys(project.tags)}
+              title={project.name}
+            />
+          </FadeIn>
+        ))}
+      </div>
+
+      {projects.length === 0 && (
+        <FadeIn className={styles.none}>
+          <p>なし</p>
         </FadeIn>
-      ))}
+      )}
     </FadeInWithStagger>
   );
 }

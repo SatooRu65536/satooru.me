@@ -3,6 +3,7 @@ import AwardsSection from '@/components/sections/Awards';
 import ExperiencesSection from '@/components/sections/Experiences';
 import LinksSection from '@/components/sections/Links';
 import RecentPostsSection from '@/components/sections/Posts';
+import PresentationsSection from '@/components/sections/Presentations';
 import ProductsSection from '@/components/sections/Products';
 import ProjectsSection from '@/components/sections/Projects';
 import SkillsSection from '@/components/sections/Skills';
@@ -17,6 +18,7 @@ export default function Page() {
       <ProjectsSection />
       <WorksSection />
       <ExperiencesSection />
+      <PresentationsSection />
       <AwardsSection />
       <RecentPostsSection />
       <ProductsSection />

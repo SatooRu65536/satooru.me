@@ -18,7 +18,7 @@ export const LINKS: Link[] = [
     name: '@SatooRu65536',
   },
   {
-    link: 'https://www.instagram.com/satooru65535',
+    link: 'https://www.instagram.com/satooru65536',
     iconKey: 'instagram',
     name: '@SatooRu65536',
   },

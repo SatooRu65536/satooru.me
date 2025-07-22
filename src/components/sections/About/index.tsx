@@ -13,7 +13,7 @@ export default function AbountSection(): ReactElement {
         <p>{ABOUT}</p>
 
         <div className={styles.detail}>
-          <Link href="/about">詳細</Link>
+          <Link href="/about">乱雑な詳細</Link>
         </div>
       </FadeIn>
     </SectionLayout>
