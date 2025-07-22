@@ -21,7 +21,7 @@ export const PRESENTATIONS: ListItemProps[] = [
   {
     date: dayjs('2025-09-8'),
     title: 'xDR Challenge2025 (予定)',
-    type: 'ポスター発表',
+    type: 'コンペティション',
     link: 'https://unit.aist.go.jp/rihsa/xDR-Challenge-2025/index.html',
     dateFormat: 'YYYY.MM.DD',
   },
