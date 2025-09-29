@@ -20,14 +20,14 @@ export const PRESENTATIONS: ListItemProps[] = [
   },
   {
     date: dayjs('2025-09-8'),
-    title: 'xDR Challenge2025 (予定)',
+    title: 'xDR Challenge2025',
     type: 'コンペティション',
     link: 'https://unit.aist.go.jp/rihsa/xDR-Challenge-2025/index.html',
     dateFormat: 'YYYY.MM.DD',
   },
   {
     date: dayjs('2025-09-10'),
-    title: 'ICMU 2025 (予定)',
+    title: 'ICMU 2025',
     description:
       'Method for Improving Cooking Activity Classification Accuracy Using Location Information and Procedure Documents',
     type: 'ポスター発表',
