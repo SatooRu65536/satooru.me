@@ -59,7 +59,8 @@ import {
   SiFlutter,
   SiTailwindcss,
   SiAwslambda,
-  SiAmazonwebservices
+  SiAmazonwebservices,
+  SiPhp,
 } from '@icons-pack/react-simple-icons';
 import { getKeys } from '@/utils';
 
@@ -102,6 +103,7 @@ export const ICON_MAP = {
   python: { name: 'Python', icon: SiPython },
   python3: { name: 'Python', icon: SiPython },
   prettier: { name: 'Prettier', icon: SiPrettier },
+  php: { name: 'PHP', icon: SiPhp },
   raspberrypi: { name: 'Raspberry Pi', icon: SiRaspberrypi },
   react: { name: 'React', icon: SiReact },
   remix: { name: 'Remix', icon: SiRemix },

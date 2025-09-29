@@ -81,5 +81,12 @@ export const AWARD: ListItemProps[] = [
     type: '学生奨励賞',
     description: 'モーションキャプチャで得られる3次元の骨格情報を用いた調理行動の分類に関する基礎検討',
     link: '/posts/report/161',
-  }
+  },
+  {
+    date: dayjs('2025-09-12'),
+    title: 'ICMU 2025',
+    type: 'Best Poster Award',
+    description: 'Method for Improving Cooking Activity Classification Accuracy Using Location Information and Procedure Documents',
+    link: '/posts/report/180',
+  },
 ].reverse();
