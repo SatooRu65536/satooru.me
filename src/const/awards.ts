@@ -86,7 +86,8 @@ export const AWARD: ListItemProps[] = [
     date: dayjs('2025-09-12'),
     title: 'ICMU 2025',
     type: 'Best Poster Award',
-    description: 'Method for Improving Cooking Activity Classification Accuracy Using Location Information and Procedure Documents',
+    description:
+      'Method for Improving Cooking Activity Classification Accuracy Using Location Information and Procedure Documents',
     link: '/posts/report/180',
   },
-].reverse();
+];

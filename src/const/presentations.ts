@@ -34,4 +34,4 @@ export const PRESENTATIONS: ListItemProps[] = [
     link: 'https://www.icmu.org/icmu2025/',
     dateFormat: 'YYYY.MM.DD',
   },
-].reverse();
+];
