@@ -61,6 +61,7 @@ import {
   SiAwslambda,
   SiAmazonwebservices,
   SiPhp,
+  SiKotlin,
 } from '@icons-pack/react-simple-icons';
 import { getKeys } from '@/utils';
 
@@ -90,6 +91,7 @@ export const ICON_MAP = {
   javascript: { name: 'JavaScript', icon: SiJavascript },
   jupyter: { name: 'Jupyter', icon: SiJupyter },
   jest: { name: 'Jest', icon: SiJest },
+  kotlin: { name: 'Kotlin', icon: SiKotlin },
   lambda: { name: 'AWS Lambda', icon: SiAwslambda },
   mantine: { name: 'Mantine', icon: SiMantine },
   mysql: { name: 'MySQL', icon: SiMysql },
