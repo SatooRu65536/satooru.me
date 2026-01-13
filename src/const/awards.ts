@@ -27,6 +27,14 @@ export const AWARD: ListItemProps[] = [
     dateFormat: 'YYYY.MM',
   },
   {
+    date: dayjs('2021-10'),
+    title: '高校生エンジニア体験',
+    type: 'AWS賞',
+    description: 'aiboの可愛い仕草をみながらすごろくをするアプリ',
+    link: '/posts/product/63',
+    dateFormat: 'YYYY.MM',
+  },
+  {
     date: dayjs('2023-06-18'),
     title: '技育CAMP キャラバンハッカソン vol.2',
     type: '最優秀賞',
