@@ -7,4 +7,10 @@
     height: 100px;
     margin-inline: auto;
   }
+
+  .heading {
+    height: auto;
+    padding: 10px 0;
+    grid-column: 1 / -1;
+  }
 }
